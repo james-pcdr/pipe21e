@@ -32,9 +32,11 @@ from pipe21e import Filter
 #                                   can specify type  ^^^ 
 ```
 
-### Docs
+### Docs & Status
 
-Most examples from the [pipe21 docs](https://tandav.github.io/pipe21/reference/) should work fine.
+In progress. Will probably have some breaking changes for a few months while I decide what I want it to look like, and then will stabilize in mid 2025 ish.
+
+But, generally, you can refer to the [pipe21 docs](https://tandav.github.io/pipe21/reference/).
 
 ### Installation
 
