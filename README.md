@@ -10,6 +10,7 @@ This is a fork of the wonderful [pipe21](https://github.com/tandav/pipe21) libra
 
 You can use `>>` to eagerly evaluate `Map`:
 ```python3
+from pipe21e import Map
 [3, 5] >> Map(lambda x: x * 2)
 ## ...is the same as...
 [3, 5] | Map(lambda x: x * 2) | Pipe(list)
@@ -17,6 +18,7 @@ You can use `>>` to eagerly evaluate `Map`:
 
 Similarly with `GroupBy`:
 ```python3
+from pipe21e import GroupBy
 ['ab', 'cd', 'e', 'f', 'gh', 'ij'] >> GroupBy(len)
 ## ...is the same as...
 ['ab', 'cd', 'e', 'f', 'gh', 'ij'] | GroupBy(len) | MapValues(list) | Pipe(list)
@@ -25,6 +27,7 @@ Similarly with `GroupBy`:
 If your editor is not providing proper type-based autocompletions, you can specify the type of the argument, as shown below. The type is only used for static checks and recommendations; it is ignored at runtime.
 
 ```python3
+from pipe21e import Filter
 ["bob", "sue"] >> Filter(lambda x: x.startswith("b"), str)
 #                                   can specify type  ^^^ 
 ```
