@@ -1,6 +1,6 @@
-# pipe21e
+# pipe21 fork with a title that will be changed later
 
-This is a fork of the wonderful [pipe21](https://github.com/tandav/pipe21) library, with the following goals:
+This is a fork of the wonderful library [pipe21](https://github.com/tandav/pipe21). This fork has the following goals:
 
 1. Add eager evaluation using `>>`.
 2. Add an optional type argument.
@@ -11,7 +11,7 @@ This is a fork of the wonderful [pipe21](https://github.com/tandav/pipe21) libra
 
 You can use `>>` to eagerly evaluate `Map`:
 ```python3
-from pipe21e import Map
+from pipe21_proper_name import Map
 [3, 5] >> Map(lambda x: x * 2)
 ## ...is the same as...
 [3, 5] | Map(lambda x: x * 2) | Pipe(list)
@@ -19,7 +19,7 @@ from pipe21e import Map
 
 Similarly with `GroupBy`:
 ```python3
-from pipe21e import GroupBy
+from pipe21_proper_name import GroupBy
 ['ab', 'cd', 'e', 'f', 'gh', 'ij'] >> GroupBy(len)
 ## ...is the same as...
 ['ab', 'cd', 'e', 'f', 'gh', 'ij'] | GroupBy(len) | MapValues(list) | Pipe(list)
@@ -28,7 +28,7 @@ from pipe21e import GroupBy
 If your editor is not providing proper type-based autocompletions, you can specify the type of the argument, as shown below. The type is only used for static checks and recommendations; it is ignored at runtime.
 
 ```python3
-from pipe21e import Filter
+from pipe21_proper_name import Filter
 ["bob", "sue"] >> Filter(lambda x: x.startswith("b"), str)
 #                                   can specify type  ^^^ 
 ```
@@ -41,4 +41,4 @@ But, generally, you can refer to the [pipe21 docs](https://tandav.github.io/pipe
 
 ### Installation
 
-(Will be available before the end of September 2024)
+(Will be available before the end of 2024)
